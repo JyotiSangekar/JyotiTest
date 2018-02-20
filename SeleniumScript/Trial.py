@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 import time
 
 
-driver= webdriver.Chrome()
+driver= webdriver.Firefox("C:\Program Files\Mozilla Firefox\firefox.exe")
 driver.get('https://unomaha.instructure.com/courses/8916/assignments/61462')
 print ('UNO page opened up')
 driver.implicitly_wait(3)
@@ -17,12 +17,4 @@ login = driver.find_element_by_name("_eventId_proceed")
 login.click()
 print('Yes! you logged into jyotis prfile')
 time.sleep(3)
-
-syllabus=driver.find_element_by_link_text("Syllabus")
-syllabus.click()
-print ('Clicked home icon on left of the page')
-
-elm= driver.find_element_by_link_text("Act 3")
-elm.click()
-print ('We are ready to re-submit activity 3')
 
